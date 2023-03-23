@@ -23,8 +23,8 @@
         "name" : "test",
         "outputPorts" : [ ],
         "position" : {
-          "x" : 433.0,
-          "y" : 183.0
+          "x" : 376.0,
+          "y" : 184.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -49,6 +49,78 @@
           "position" : {
             "x" : 519.0,
             "y" : 199.0
+          },
+          "properties" : {
+            "ATTRIBUTE_NAME" : "fuzzyhash.value",
+            "MATCHING_MODE" : "single"
+          },
+          "propertyDescriptors" : {
+            "ATTRIBUTE_NAME" : {
+              "displayName" : "Hash Attribute Name",
+              "identifiesControllerService" : false,
+              "name" : "ATTRIBUTE_NAME",
+              "sensitive" : false
+            },
+            "HASH_LIST_FILE" : {
+              "displayName" : "Hash List Source File",
+              "identifiesControllerService" : false,
+              "name" : "HASH_LIST_FILE",
+              "resourceDefinition" : {
+                "cardinality" : "SINGLE",
+                "resourceTypes" : [ "FILE" ]
+              },
+              "sensitive" : false
+            },
+            "HASH_ALGORITHM" : {
+              "displayName" : "Hashing Algorithm",
+              "identifiesControllerService" : false,
+              "name" : "HASH_ALGORITHM",
+              "sensitive" : false
+            },
+            "MATCH_THRESHOLD" : {
+              "displayName" : "Match Threshold",
+              "identifiesControllerService" : false,
+              "name" : "MATCH_THRESHOLD",
+              "sensitive" : false
+            },
+            "MATCHING_MODE" : {
+              "displayName" : "Matching Mode",
+              "identifiesControllerService" : false,
+              "name" : "MATCHING_MODE",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.cybersecurity.CompareFuzzyHash",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-cybersecurity-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.19.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "400beacc-bfd7-3e57-9f16-94b05556d70e",
+          "identifier" : "1f3225ca-ef63-3cd8-8215-6057155b9b0a",
+          "instanceIdentifier" : "0d9c4400-0187-1000-8857-e523bb48fd82",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "CompareFuzzyHash",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 440.0,
+            "y" : 80.0
           },
           "properties" : {
             "ATTRIBUTE_NAME" : "fuzzyhash.value",
